@@ -468,7 +468,7 @@ const keyboard_downKeys = [];
 
 const updateMusicOnState = () => {
     mainMenuVisible || !music_on ? songAudioSource.disconnect() : songAudioSource.connect(audioContext.destination);
-    b4.innerHTML = "Music: " + music_on;
+    b4.innerHTML = "音乐：" + (music_on ? "开" : "关");
 };
 
 const setMainMenuVisible = (value = !1) => {
@@ -639,7 +639,7 @@ const clearMessage = () => {
 
 const updateCollectedSoulsCounter = () => {
     souls_collected_count = souls.reduce(((acc, cur) => acc + cur.$value), 0);
-    h3.innerHTML = " " + [ "0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII" ][souls_collected_count];
+    h3.innerHTML = " " + [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" ][souls_collected_count];
 };
 
 const saveGame = () => {
