@@ -33,7 +33,7 @@ const updateMusicOnState = () => {
     // connect the AudioBufferSourceNode to the  destination so we can hear the sound
     songAudioSource.connect(audioContext.destination);
   }
-  b4.innerHTML = "Music: " + music_on;
+  b4.innerHTML = "音乐：" + (music_on ? "开" : "关");
 };
 
 export const setMainMenuVisible = (value: boolean = false) => {
